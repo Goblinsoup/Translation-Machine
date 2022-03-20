@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRANSLATION MACHINE</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="p5.js"></script>
+
+<link rel="stylesheet" href="https://use.typekit.net/fnd3phs.css">
+
+</head>
+
+<body>
+  <!-- <script src="../addons/p5.sound.js"></script> -->
+  <script src="sketch.js"></script>
+<div class="header">
+<h1>TYPE SOMETHING</h1>
+</div>
+
+<div class="saveas">
+<button onclick="save2()"><img src="save1.png" style="width:100%"></button>
+<script type="text/javascript">
+function save2() {
+    window.open(canvas.toDataURL('image/png'));
+    var gh = canvas.toDataURL('png');
+
+    var a  = document.createElement('a');
+    a.href = gh;
+    a.download = 'image.png';
+
+    a.click()
+}
+</script>
+</div>
+
+<div class="refresh">
+  <button onClick="window.location.reload();"><img src="refresh1.png" style="width:100%"></button>
+</div>
+
+<div class="gallery">
+  <a href="gallery.html"><button><img src="gallery.png" style="width:100%"></button></a>
+</div>
+
+<div class="gob">
+  <a href="http://goblinproblem.com/" target="_blank"><button><img src="gob1.png" style="width:100%"></button></a>
+</div>
+
+
+<!-- Trigger/Open The Modal -->
+<div class="about">
+<button id="myBtn"><img src="about1.png" style="width:100%"></button>
+</div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>ABOUT</h2>
+<p>This program binds each letter key on your keyboard to a different shape or symbol in order to translate your typing into a piece of procedural abstract artwork. In addition to the letter keys, each of the number keys are bound to different filters, effects, and textural overlays to further enhance the designs. Below is a handy little chart that shows what each key corresponds to. At the bottom of the page you can see a live feedback of which keys you have entered into the program. This program works destructively, which means there is no going back after something is typed. The only way to go back is to start over by refreshing the page. </p>
+
+    <img src="key2.png" style="width:80%">
+<div class="uglyfix">
+</div>
+
+  </div>
+
+<script type="text/javascript">
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+if (event.target == modal) {
+  modal.style.display = "none";
+}
+}
+</script>
+</div>
+
+
+
+
+
+
+</body>
+
+</html>
